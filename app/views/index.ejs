@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= username %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <p>Welcome  <%= username %></p>
+    <a href="https://github.com/2019swsad/server">Project main page</a>
+    <form action="/users/login" method="post">
+        <p>
+          <label>Username:
+            <input type="text" name="username" value="test" />
+          </label>
+        </p>
+        <p>
+          <label>Password:
+            <input type="password" name="password" value="test" />
+          </label>
+        </p>
+        <p>
+          <button type="submit">Log In</button>
+        </p>
+    </form>
+    <form action="/users/reg" method="post">
+        <p>
+          <label>Username:
+            <input type="text" name="username" value="test" />
+          </label>
+        </p>
+        <p>
+          <label>Password:
+            <input type="password" name="password" value="test" />
+          </label>
+        </p>
+        <p>
+            <label>phone:
+              <input type="text" name="phone" value="13800138000" />
+            </label>
+          </p>
+          <p>
+            <label>email:
+              <input type="email" name="email" value="test@test.com" />
+            </label>
+          </p>
+          <p>
+            <label>nickname:
+              <input type="text" name="nickname" value="hullo" />
+            </label>
+          </p>
+        <p>
+          <button type="submit">Reg</button>
+        </p>
+    </form>
+    <form action="/users/update" method="post">
+      <p>
+        <label>uid:
+          <input type="text" name="uid" value="test" />
+        </label>
+      </p>
+      <p>
+        <label>password:
+          <input type="password" name="password" value="test" />
+        </label>
+      </p>
+      <p>
+        <button type="submit">edit</button>
+      </p>
+    </form>
+    <form action="/file" method="post" enctype="multipart/form-data">
+      <input type="file" name="file">
+      <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
